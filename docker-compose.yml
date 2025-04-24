@@ -1,0 +1,12 @@
+version: '3'
+services:
+  telegram-bot:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - SPREADSHEET_ID=${SPREADSHEET_ID}
+      - DRIVE_ORDERS_ID=${DRIVE_ORDERS_ID}
+    restart: always
