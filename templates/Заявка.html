@@ -1,0 +1,540 @@
+<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<style type="text/css">html {font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white}
+a.comment-indicator:hover + div.comment {background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em}
+a.comment-indicator {background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em}
+div.comment {display:none}
+table {border-collapse:collapse; page-break-after:always}
+.gridlines td, .gridlines th {border:1px dotted black}
+.b, .e {text-align:center}
+.f, .n {text-align:right}
+.inlineStr, .s {text-align:left}
+td.style0, th.style0 {vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style1, th.style1 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style2, th.style2 {vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style3, th.style3, td.style4, th.style4 {vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style5, th.style5, td.style75, th.style75 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style6, th.style6, td.style76, th.style76 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style7, th.style7, td.style79, th.style79 {vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style8, th.style8 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:#FFFFFF}
+td.style9, th.style9, td.style15, th.style15 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:#FFFFFF}
+td.style10, th.style10, td.style12, th.style12, td.style13, th.style13, td.style21, th.style21 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:#FFFFFF}
+td.style11, th.style11 {vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:#FFFFFF}
+td.style14, th.style14, td.style24, th.style24 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:#FFFFFF}
+td.style16, th.style16, td.style96, th.style96, td.style97, th.style97 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:#FFFFFF}
+td.style17, th.style17, td.style22, th.style22, td.style23, th.style23 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:#FFFFFF}
+td.style18, th.style18 {vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:#FFFFFF}
+td.style19, th.style19 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:#FFFFFF}
+td.style20, th.style20 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:#FFFFFF}
+td.style25, th.style25, td.style35, th.style35 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style26, th.style26 {vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style27, th.style27, td.style38, th.style38 {vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style28, th.style28 {vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style29, th.style29 {vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:white}
+td.style30, th.style30 {vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style31, th.style31 {vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style32, th.style32, td.style69, th.style69, td.style70, th.style70, td.style71, th.style71 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:white}
+td.style33, th.style33 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF}
+td.style34, th.style34 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:#FFFFFF}
+td.style36, th.style36 {vertical-align:top; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:6pt; background-color:white}
+td.style37, th.style37 {vertical-align:top; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style39, th.style39, td.style46, th.style46 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style40, th.style40, td.style58, th.style58 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style41, th.style41, td.style59, th.style59 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style42, th.style42, td.style60, th.style60 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style43, th.style43 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style44, th.style44 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style45, th.style45 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style47, th.style47 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style48, th.style48 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style49, th.style49 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style50, th.style50 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style51, th.style51 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFFFF}
+td.style52, th.style52 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style53, th.style53 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style54, th.style54 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style55, th.style55 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style56, th.style56 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style57, th.style57 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style61, th.style61 {vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style62, th.style62 {vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style63, th.style63 {vertical-align:middle; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style64, th.style64 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:white}
+td.style65, th.style65 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:white}
+td.style66, th.style66 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:none #000000; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:white}
+td.style67, th.style67, td.style94, th.style94 {vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style68, th.style68, td.style95, th.style95 {vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style72, th.style72 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style73, th.style73 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style74, th.style74 {vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style77, th.style77 {vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style78, th.style78 {vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style80, th.style80 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; color:#2D4D6A; font-family:'Times New Roman'; font-size:14pt; background-color:white}
+td.style81, th.style81 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:14pt; background-color:white}
+td.style82, th.style82, td.style83, th.style83 {vertical-align:top; text-align:left; padding-left:0px; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:8pt; background-color:white}
+td.style84, th.style84 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:none #000000; color:#2D4D6A; font-family:'Times New Roman'; font-size:14pt; background-color:white}
+td.style85, th.style85 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#2D4D6A; font-family:'Times New Roman'; font-size:14pt; background-color:white}
+td.style86, th.style86 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:white}
+td.style87, th.style87 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:white}
+td.style88, th.style88 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:white}
+td.style89, th.style89 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:white}
+td.style90, th.style90 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:white}
+td.style91, th.style91 {vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:8pt; background-color:white}
+td.style92, th.style92 {vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:white}
+td.style93, th.style93 {vertical-align:middle; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:white}
+td.style98, th.style98 {vertical-align:bottom; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white}
+td.style99, th.style99 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:none #000000; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:22pt; background-color:#FFFF00}
+td.style100, th.style100, td.style101, th.style101 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:11pt; background-color:#FFFF00}
+td.style102, th.style102 {vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:10pt; background-color:#FFFF00}
+td.style103, th.style103 {vertical-align:middle; text-align:center; border-bottom:1px solid #000000 !important; border-top:1px solid #000000 !important; border-left:1px solid #000000 !important; border-right:1px solid #000000 !important; color:#000000; font-family:'Times New Roman'; font-size:7pt; background-color:#FFFF00}
+table.sheet0 col.col0 {width:18.29999979pt}
+table.sheet0 col.col1 {width:76.58888801pt}
+table.sheet0 col.col2 {width:86.75555456pt}
+table.sheet0 col.col3 {width:60.9999993pt}
+table.sheet0 col.col4 {width:31.85555519pt}
+table.sheet0 col.col5 {width:124.71110968pt}
+table.sheet0 col.col6 {width:75.23333247pt}
+table.sheet0 col.col7 {width:102.34444327pt}
+table.sheet0 col.col8 {width:39.31111066pt}
+table.sheet0 col.col9, table.sheet0 col.col10, table.sheet0 col.col11, table.sheet0 col.col12, table.sheet0 col.col13 {width:58.28888822pt}
+table.sheet0 col.col14 {width:56.93333268pt}
+table.sheet0 col.col15 {width:100.98888773pt}
+table.sheet0 tr, table.sheet0 tr.row18 {height:15pt}
+table.sheet0 tr.row0, table.sheet0 tr.row1 {height:13.95pt}
+table.sheet0 tr.row2, table.sheet0 tr.row15, table.sheet0 tr.row24 {height:11.25pt}
+table.sheet0 tr.row3 {height:17.4pt}
+table.sheet0 tr.row4 {height:30pt}
+table.sheet0 tr.row5 {height:25.8pt}
+table.sheet0 tr.row6 {height:66.6pt}
+table.sheet0 tr.row7, table.sheet0 tr.row23, table.sheet0 tr.row40 {height:28.2pt}
+table.sheet0 tr.row8 {height:20.4pt}
+table.sheet0 tr.row9 {height:40.5pt}
+table.sheet0 tr.row10, table.sheet0 tr.row11, table.sheet0 tr.row12, table.sheet0 tr.row37 {height:19.2pt}
+table.sheet0 tr.row13, table.sheet0 tr.row14 {height:22.5pt}
+table.sheet0 tr.row16 {height:33.75pt}
+table.sheet0 tr.row17 {height:45pt}
+table.sheet0 tr.row19 {height:7.5pt}
+table.sheet0 tr.row20 {height:11.4pt}
+table.sheet0 tr.row21, table.sheet0 tr.row22 {height:9.45pt}
+table.sheet0 tr.row25 {height:52.8pt}
+table.sheet0 tr.row26 {height:41.4pt; display:none; visibility:hidden}
+table.sheet0 tr.row27, table.sheet0 tr.row28, table.sheet0 tr.row29 {height:44.4pt; display:none; visibility:hidden}
+table.sheet0 tr.row30, table.sheet0 tr.row31, table.sheet0 tr.row32, table.sheet0 tr.row33, table.sheet0 tr.row34, table.sheet0 tr.row35, table.sheet0 tr.row36 {height:35.4pt; display:none; visibility:hidden}
+table.sheet0 tr.row38 {height:21.75pt}
+table.sheet0 tr.row39 {height:78pt}
+</style>
+</head>
+<body>
+<style>
+@page { margin-left: 0.34313725490196in; margin-right: 0.31496062992126in; margin-top: 0.27450980392157in; margin-bottom: 0.44117647058824in; }
+body { margin-left: 0.34313725490196in; margin-right: 0.31496062992126in; margin-top: 0.27450980392157in; margin-bottom: 0.44117647058824in; }
+</style>
+<table border="0" cellpadding="0" cellspacing="0" class="sheet0 gridlines" id="sheet0">
+<colgroup><col class="col0"/>
+<col class="col1"/>
+<col class="col2"/>
+<col class="col3"/>
+<col class="col4"/>
+<col class="col5"/>
+<col class="col6"/>
+<col class="col7"/>
+<col class="col8"/>
+<col class="col9"/>
+<col class="col10"/>
+<col class="col11"/>
+<col class="col12"/>
+<col class="col13"/>
+<col class="col14"/>
+<col class="col15"/>
+</colgroup><tbody>
+<tr class="row0">
+<td class="column0 style72 style79" colspan="6" rowspan="4"><img src="data:image/png;base64,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"></td>
+<td class="column4 style80 s style81" colspan="9">LIMITED LIABILITY COMPANY EUCRST</td>
+<td class="column15 style82 s style9" rowspan="4">Е/02/F-01.2 <br/>
+Rev. 2<br/>
+01/22/2025</td>
+</tr>
+<tr class="row1">
+<td class="column4 style84 s style85" colspan="9">Construction Laboratory in ARE</td>
+</tr>
+<tr class="row2">
+<td class="column4 style86 s style89" colspan="9" rowspan="2">Application for non-destructive testing of welded joints, equipment and base metall / <br/>
+Заявка на неразрушающий контроль сварных соединений, оборудования и основного металла</td>
+</tr>
+<tr class="row3">
+</tr>
+<tr class="row4">
+<td class="column0 style90 s style90" colspan="6">APPLICATION № / ЗАЯВКА № <br/>
+(assigned by the customer/<br/>
+Присвоен заказчиком)</td>
+<td class="column6 style99 s style99" colspan="3">{application}</td>
+<td class="column9 style90 s style90" colspan="5">APPLICATION № / ЗАЯВКА № <br/>
+(Issued by the laboratory/<br/>
+Выдается лабораторией)</td>
+<td class="column14 style91 null style91" colspan="2"></td>
+</tr>
+<tr class="row5">
+<td class="column0 style92 s style93" colspan="6">CUSTOMER / <span style="color:#000000; font-family:'Times New Roman'; font-size:11pt">ЗАКАЗЧИК</span></td>
+<td class="column6 style100 s style100" colspan="10">{company}</td>
+</tr>
+<tr class="row6">
+<td class="column0 style94 s style95" colspan="6">Name of the object / <span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">Наименование объекта</span><span style="font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt"> </span></td>
+<td class="column6 style96 s style97" colspan="10">Combined pumping station of industrial and fire-fighting water supply (30USG). Foundation slab and floor slab at el. -4.600. Geometrical dimensions.<br/>
+batch 140425.1 MD-1-7(3pcs)<br/>
+               </td>
+</tr>
+<tr class="row7">
+<td class="column0 style27 s style28" colspan="6">Project's number and name / <span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">Номер и наименование проекта</span><span style="font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt"> </span></td>
+<td class="column6 style32 s style69" colspan="10">ED.D.P000.3.0USG92&amp;&amp;&amp;&amp;&amp;&amp;.012.DC.0001.E_C01</td>
+</tr>
+<tr class="row8">
+<td class="column0 style67 s style68" colspan="6">Number of the welding map / <span style="color:#000000; font-family:'Segoe UI Symbol'; font-size:7pt">№</span><span style="color:#000000; font-family:'Times New Roman'; font-size:7pt"> сварочного формуляра </span></td>
+<td class="column6 style71 s style32" colspan="10">N/A</td>
+</tr>
+<tr class="row9">
+<td class="column0 style61 s style63" colspan="6">Weiding consumables / <span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">Cварочные материалы </span></td>
+<td class="column6 style32 s style32" colspan="10">FLUX</td>
+</tr>
+<tr class="row10">
+<td class="column0 style61 s style63" colspan="6">Safety class/ <span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">Класс безопасности</span></td>
+<td class="column6 style64 s style66" colspan="10">N/A</td>
+</tr>
+<tr class="row11">
+<td class="column0 style61 s style63" colspan="6">Code/ <span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">Код KKS</span></td>
+<td class="column6 style71 s style32" colspan="10">N/A</td>
+</tr>
+<tr class="row12">
+<td class="column0 style61 s style63" colspan="6">Weld category/<span style="color:#000000; font-family:'Times New Roman'; font-size:7pt"> Категория сварного шва</span></td>
+<td class="column6 style64 s style66" colspan="10">N/A</td>
+</tr>
+<tr class="row13">
+<td class="column0 style67 s style68" colspan="6">SCHEDULED DATE / TIME for testing<br/>
+<span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">ЗАПЛАНИРОВАННАЯ ДАТА / ВРЕМЯ проведения испытания </span></td>
+<td class="column6 style69 s style69" colspan="10">{today}</td>
+</tr>
+<tr class="row14">
+<td class="column0 style61 s style62" colspan="6">SCHEDULED DATE / TIME for test results to be provided<br/>
+<span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">ЗАПЛАНИРОВАННАЯ ДАТА / ВРЕМЯ предоставления протоколов испытаний</span></td>
+<td class="column6 style70 s style69" colspan="10">22.04.2025</td>
+</tr>
+<tr class="row15">
+<td class="column0 style27 s style28" colspan="6">Request for determining compliance / <span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">Заявка на определение соответствия</span></td>
+<td class="column6 style29 s style29" colspan="10">☐ Yes / Да    ☐ No / Нет</td>
+</tr>
+<tr class="row16">
+<td class="column0 style30 s style31" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt">The standard, requirement and/or other source to be used for determining compliance that has been taken from detailed documentation / </span><span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">Используемый для определения соответствия стандарт, требование и/или др.источник взятый из рабочей документации</span></td>
+<td class="column6 style101 s style101" colspan="10">{standard}</td>
+</tr>
+<tr class="row17">
+<td class="column0 style30 s style31" colspan="6"><span style="font-weight:bold; color:#000000; font-family:'Times New Roman'; font-size:7pt">DECISION RULE</span><span style="color:#000000; font-family:'Times New Roman'; font-size:7pt"> / Правило принятия решения</span></td>
+<td class="column6 style37 s style37" colspan="10">Simple acceptance rule (the test results are to be compared with the acceptance criterias without taking measurements uncertainty into account) / Простое соответствие (результаты испытания сравниваются с критериями приемки без учета неопределенности измерений) <br/>
+☐ Yes / Да                             <br/>
+☐ Other (specify) / Другое (уточните)____________________________</td>
+</tr>
+<tr class="row18">
+<td class="column0 style38 s style38" colspan="16">Notes / Примечания :</td>
+</tr>
+<tr class="row20">
+<td class="column0 style39 s style39" rowspan="3">No<br/>
+№ п/п</td>
+<td class="column1 style40 s style41" rowspan="3">Unit code (No) /<br/>
+Шифр (номер) узла </td>
+<td class="column2 style43 s style44" rowspan="3">Welding joint No<br/>
+name of equipment, base metal)<br/>
+ / № сварного соединения <br/>
+(наименование оборудования, основного металла)</td>
+<td class="column3 style43 s style44" rowspan="3">Общее количество либо длина сварных соединений/Total quantity or length of welded joints</td>
+<td class="column4 style39 s style46" rowspan="3">Category/<br/>
+Категория </td>
+<td class="column5 style47 s style48" colspan="2">Base metal / Основной материал</td>
+<td class="column7 style49 s style50" rowspan="3">Type of welding joint /<br/>
+ Тип сварного соединения </td>
+<td class="column8 style39 s style39" rowspan="3">Type of welding/ <br/>
+Вид сварки</td>
+<td class="column9 style52 s style57" colspan="6" rowspan="2">Methods and Scope of control, %/<br/>
+Методы и объемы контроля (%)</td>
+<td class="column15 style39 s style39" rowspan="3">Welder's name and stamp<br/>
+ФИО и клеймо сварщика</td>
+</tr>
+<tr class="row21">
+<td class="column5 style39 s style39" rowspan="2">Standard size of welding joint (thickness of the  joint in the control point) / Типоразмер сварного соединения (диаметр, толщина  соединения)</td>
+<td class="column6 style58 s style59" rowspan="2">Steel grade / Марка стали </td>
+</tr>
+<tr class="row23">
+<td class="column9 style103 s">VMC / ВИК</td>
+<td class="column10 style103 s">UT/УЗК</td>
+<td class="column11 style103 s">PT/КК</td>
+<td class="column12 style103 s">RT/РК</td>
+<td class="column13 style103 s">LT (cerosin)/ КГ(керосин)</td>
+<td class="column14 style103 s">LT(vacuum)/ КГ(ваккум)</td>
+</tr>
+<tr class="row24">
+<td class="column0 style1 n">1</td>
+<td class="column1 style2 n">2</td>
+<td class="column2 style2 n">3</td>
+<td class="column3 style2 n">4</td>
+<td class="column4 style2 n">5</td>
+<td class="column5 style2 n">6</td>
+<td class="column6 style2 n">7</td>
+<td class="column7 style2 n">8</td>
+<td class="column8 style2 n">9</td>
+<td class="column9 style2 n">10</td>
+<td class="column10 style2 n">11</td>
+<td class="column11 style2 n">12</td>
+<td class="column12 style2 n">13</td>
+<td class="column13 style2 n">14</td>
+<td class="column14 style2 n">15</td>
+<td class="column15 style2 n">16</td>
+</tr>
+<tr class="row25">
+<td class="column0 style25 n">1</td>
+<td class="column1 style25 s">MD-1-7(3pcs)</td>
+<td class="column2 style13 s">1-16</td>
+<td class="column3 style21 f">48</td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 s">t10+Ø12<br/>
+GOST 14098-2014 T1-Mf</td>
+<td class="column6 style9 s">S275J2 EN <br/>
+ &amp; B500CWR</td>
+<td class="column7 style102 s">{joint_type}</td>
+<td class="column8 style12 s">SAW</td>
+<td class="column9 style12 n">{vmc}</td>
+<td class="column10 style12 n">{ut}</td>
+<td class="column11 style12 n">{pt}</td>
+<td class="column12 style12 n">{rt}</td>
+<td class="column13 style12 n">{ltc}</td>
+<td class="column14 style12 n">{ltv}</td>
+<td class="column15 style9 s">PW003 (140425.1)</td>
+</tr>
+<tr class="row26">
+<td class="column0 style25 null"></td>
+<td class="column1 style25 null"></td>
+<td class="column2 style13 s">1-4</td>
+<td class="column3 style21 n">8</td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 s">t12+Ø12<br/>
+GOST 14098-2014 T1-Mf</td>
+<td class="column6 style9 s">S275J2 EN <br/>
+ &amp; B500CWR</td>
+<td class="column7 style9 s">GOST 14098-2014 T1-Mf</td>
+<td class="column8 style12 s">SAW</td>
+<td class="column9 style10 n">100%</td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (140425.1)</td>
+</tr>
+<tr class="row27">
+<td class="column0 style8 null"></td>
+<td class="column1 style23 null"></td>
+<td class="column2 style17 null"></td>
+<td class="column3 style22 null"></td>
+<td class="column4 style18 null"></td>
+<td class="column5 style9 null"></td>
+<td class="column6 style9 null"></td>
+<td class="column7 style19 null"></td>
+<td class="column8 style20 null"></td>
+<td class="column9 style10 null"></td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (120425.1)</td>
+</tr>
+<tr class="row28">
+<td class="column0 style8 null"></td>
+<td class="column1 style33 null style34" rowspan="2"></td>
+<td class="column2 style13 null"></td>
+<td class="column3 style21 null"></td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 null"></td>
+<td class="column6 style9 null"></td>
+<td class="column7 style9 null"></td>
+<td class="column8 style12 null"></td>
+<td class="column9 style10 null"></td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (120425.1)</td>
+</tr>
+<tr class="row29">
+<td class="column0 style8 null"></td>
+<td class="column2 style13 null"></td>
+<td class="column3 style21 null"></td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 null"></td>
+<td class="column6 style9 null"></td>
+<td class="column7 style9 null"></td>
+<td class="column8 style12 null"></td>
+<td class="column9 style10 null"></td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (120425.1)</td>
+</tr>
+<tr class="row30">
+<td class="column0 style8 null"></td>
+<td class="column1 style33 null style34" rowspan="2"></td>
+<td class="column2 style13 null"></td>
+<td class="column3 style21 null"></td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 null"></td>
+<td class="column6 style9 null"></td>
+<td class="column7 style9 null"></td>
+<td class="column8 style12 null"></td>
+<td class="column9 style10 null"></td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (120425.1)</td>
+</tr>
+<tr class="row31">
+<td class="column0 style8 null"></td>
+<td class="column2 style13 null"></td>
+<td class="column3 style21 null"></td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 null"></td>
+<td class="column6 style9 null"></td>
+<td class="column7 style9 null"></td>
+<td class="column8 style12 null"></td>
+<td class="column9 style10 null"></td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (120425.1)</td>
+</tr>
+<tr class="row32">
+<td class="column0 style8 null"></td>
+<td class="column1 style15 null"></td>
+<td class="column2 style13 null"></td>
+<td class="column3 style21 null"></td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 null"></td>
+<td class="column6 style9 null"></td>
+<td class="column7 style9 null"></td>
+<td class="column8 style12 null"></td>
+<td class="column9 style10 null"></td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (120425.1)</td>
+</tr>
+<tr class="row33">
+<td class="column0 style8 n">3</td>
+<td class="column1 style16 s">MD-1-34(1pcs.)</td>
+<td class="column2 style13 s">1-4</td>
+<td class="column3 style21 n">4</td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 s">t12+Ø12<br/>
+GOST 14098-2014 T1-Mf</td>
+<td class="column6 style9 s">S275J2 EN <br/>
+ &amp; B500CWR</td>
+<td class="column7 style9 s">GOST 14098-2014 T1-Mf</td>
+<td class="column8 style12 s">SAW</td>
+<td class="column9 style10 n">100%</td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (120425.1)</td>
+</tr>
+<tr class="row34">
+<td class="column0 style35 n style35" rowspan="2">4</td>
+<td class="column1 style35 s style35" rowspan="2">MD-7-1(1pcs)</td>
+<td class="column2 style13 s">1-2</td>
+<td class="column3 style21 n">2</td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 s">t12+Ø12<br/>
+GOST 14098-2014 T1-Mf</td>
+<td class="column6 style9 s">S275J2 EN <br/>
+ &amp; B500CWR</td>
+<td class="column7 style9 s">GOST 14098-2014 T1-Mf</td>
+<td class="column8 style12 s">SAW</td>
+<td class="column9 style10 n">100%</td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (120425.1)</td>
+</tr>
+<tr class="row35">
+<td class="column2 style13 s">1-4</td>
+<td class="column3 style21 n">4</td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 s">t12+Ø12<br/>
+GOST 14098-2014 N1-Rsh</td>
+<td class="column6 style9 s">S275J2 EN <br/>
+ &amp; B500CWR</td>
+<td class="column7 style9 s">GOST 14098-2014 N1-Rsh</td>
+<td class="column8 style12 n">111</td>
+<td class="column9 style10 n">100%</td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (120425.1)</td>
+</tr>
+<tr class="row36">
+<td class="column0 style8 n">5</td>
+<td class="column1 style16 s">MD-4-1(1pcs)</td>
+<td class="column2 style13 s">1-32</td>
+<td class="column3 style21 n">32</td>
+<td class="column4 style9 null"></td>
+<td class="column5 style9 s">t10+Ø10<br/>
+GOST 14098-2014 T1-Mf</td>
+<td class="column6 style9 s">S275J2 EN <br/>
+ &amp; B500CWR</td>
+<td class="column7 style9 s">GOST 14098-2014 T1-Mf</td>
+<td class="column8 style12 s">SAW</td>
+<td class="column9 style10 n">100%</td>
+<td class="column10 style11 null"></td>
+<td class="column11 style11 null"></td>
+<td class="column12 style11 null"></td>
+<td class="column13 style11 null"></td>
+<td class="column14 style9 null"></td>
+<td class="column15 style9 s">PW003 (140425)</td>
+</tr>
+<tr class="row37">
+<td class="column0 style4 null"></td>
+<td class="column1 style3 null"></td>
+<td class="column2 style14 s">TOTAL</td>
+<td class="column3 style24 n">48</td>
+<td class="column4 style3 null"></td>
+<td class="column5 style4 null"></td>
+<td class="column6 style4 null"></td>
+<td class="column7 style4 null"></td>
+<td class="column8 style4 null"></td>
+<td class="column9 style4 null"></td>
+<td class="column10 style4 null"></td>
+<td class="column11 style4 null"></td>
+<td class="column12 style4 null"></td>
+<td class="column13 style4 null"></td>
+<td class="column14 style4 null"></td>
+<td class="column15 style4 null"></td>
+</tr>
+<tr class="row38">
+<td class="column0 style26 s style26" colspan="16">APPLICANT'S FULL NAME, SIGNATURE AND CONTACT DETAILS /<br/>
+<span style="color:#000000; font-family:'Times New Roman'; font-size:7pt">ЗАКАЗЧИК: ФИО, ПОДПИСЬ И КОНТАКТЫ ДЛЯ СВЯЗИ </span></td>
+</tr>
+<tr class="row39">
+<td class="column0 style36 s style36" colspan="16">All the data has been obtained as the result of the actions according to the application  will be used by the Construction Laboratory only for making a decision about correspondence of controlled objects to the quality requirements and can't be disclosed or transtened to thrird parties outside of the Project. Organizations that verify the activities of the Laboratory may except this rule (for example, an accreditation agency). The Construction Laboratory accepts only properly filled out applications, that include the test standard and it's year of issue. If all required  information haven't been put in the application, the application can't be accepted and must be send back to the customer for revision. The Construction Laboratory has the right to refuse conducting tests that haven't been specified in the appendix to the contract or exceed the range of laboratory's accreditation. If it's necessary. The Construction Laboratory has the right to involve other subcontractors for conducting tests or conducting tests on the territory of third-party laboratories, of which the customer must be informed about.<br/>
+Вся информация, полученная в результате выполнения работ по Заявке будет использоваться Строительной Лабораторией только для подтверждения соответствия объектов контроля стандартам качества для этих объектов, и не подлежит разглашению / передаче сторонам, не участвующим в Проекте. Исключения могут составлять организации, осуществляющие проверку деятельности Строительной Лаборатории (например, орган по аккредитации). Строительная лаборатория принимает только полностью заполненные заявки, включая наличие стандарта на испытания с указанием года выпуска стандарта. В случае отсутствия в заявки необходимой информации, заявка не принимается, а отправляется заказчику на доработку. Строительная лаборатория имеет право отказать в проведении испытаний, которые не указаны в приложении к договору или отсутствуют в области аккредитации лаборатории. В случае необходимости, строительная лаборатория имеет право привлекать субподрядчиков или проводить испытания на территории сторонних лабораторий.</td>
+</tr>
+</tbody>
+</table>
+</body></html>
