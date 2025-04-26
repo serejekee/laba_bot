@@ -9,4 +9,5 @@ services:
       - BOT_TOKEN=${BOT_TOKEN}
       - SPREADSHEET_ID=${SPREADSHEET_ID}
       - DRIVE_ORDERS_ID=${DRIVE_ORDERS_ID}
+      - DRIVE_REPORT_ID=${DRIVE_REPORT_ID}
     restart: always
