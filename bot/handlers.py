@@ -168,23 +168,18 @@ async def process_user_apply_request_save(message: types.Message, state: FSMCont
 
     if len(parts) != 9:
         await message.answer("❌ Ошибка ввода. Нужно передать 9 значений через `;`.")
-        await state.clear()
         await state.set_state(Form.waiting_for_user_apply_request)
-        return
 
     application, standard, joint_type, vmc, ut, pt, rt, ltc, ltv = parts
     if '/' in application:
         await message.answer("❌ Ошибка: в названии заявки недопустим символ `/`. Попробуйте снова ввести данные.")
-        await state.clear()
         await state.set_state(Form.waiting_for_user_apply_request)
-        return
 
     company = await get_user_company(user_id)
 
     if not company:
         await message.answer("❌ Не удалось определить компанию. Пройдите регистрацию заново.")
         await state.clear()
-        return
 
     today = datetime.now().strftime("%d-%m-%y_%H:%M")
     output_path = await generate_application_excel(
@@ -324,7 +319,7 @@ async def registration_product_manager(message: types.Message, state: FSMContext
         await message.answer("Введите ФИО и пароль, через запятую:")
         await state.set_state(Form.waiting_for_reg_product_manager)
     else:
-        await message.answer("Вы уде зарегестрированы в компании!")
+        await message.answer("Вы уже зарегестрированы в компании!")
 
 
 @router.message(Form.waiting_for_reg_product_manager)
