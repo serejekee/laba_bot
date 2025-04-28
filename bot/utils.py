@@ -133,18 +133,18 @@ async def get_user_company(user_id):
 
 def upload_to_drive(file_path):
     """
-    Загружает файл на Google Drive в папку с ID drive_orders_id.
+    Загружает файл Excel (.xlsx) на Google Drive в папку с ID drive_orders_id.
     Возвращает ID загруженного файла или None при ошибке.
     """
     file_name = os.path.basename(file_path)
 
     metadata = {
         'name': file_name,
-        'mimeType': 'text/html',
+        'mimeType': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
         'parents': [drive_orders_id]
     }
 
-    media = MediaFileUpload(file_path, mimetype='text/html', resumable=True)
+    media = MediaFileUpload(file_path, mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', resumable=True)
 
     try:
         resp = drive_service.files().create(
@@ -154,9 +154,11 @@ def upload_to_drive(file_path):
         ).execute()
         return resp.get('id')
 
-    except HttpError:
+    except HttpError as error:
+        print(f"HttpError occurred: {error}")
         return None
-    except Exception:
+    except Exception as error:
+        print(f"Unexpected error occurred: {error}")
         return None
 
 
@@ -561,11 +563,11 @@ def upload_report(file_path):
 
     metadata = {
         'name': file_name,
-        'mimeType': 'text/html',
+        'mimeType': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
         'parents': [drive_report_id]
     }
 
-    media = MediaFileUpload(file_path, mimetype='text/html', resumable=True)
+    media = MediaFileUpload(file_path, mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', resumable=True)
 
     try:
         resp = drive_service.files().create(

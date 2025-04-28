@@ -133,7 +133,6 @@ async def process_company_selection(callback_query: CallbackQuery, state: FSMCon
         spreadsheetId=spreadsheet_id,
         range=user_range,
         valueInputOption='RAW',
-        insertDataOption='INSERT_ROWS',
         body={'values': values}
     ).execute()
 
@@ -169,9 +168,17 @@ async def process_user_apply_request_save(message: types.Message, state: FSMCont
 
     if len(parts) != 9:
         await message.answer("❌ Ошибка ввода. Нужно передать 9 значений через `;`.")
+        await state.clear()
+        await state.set_state(Form.waiting_for_user_apply_request)
         return
 
     application, standard, joint_type, vmc, ut, pt, rt, ltc, ltv = parts
+    if '/' in application:
+        await message.answer("❌ Ошибка: в названии заявки недопустим символ `/`. Попробуйте снова ввести данные.")
+        await state.clear()
+        await state.set_state(Form.waiting_for_user_apply_request)
+        return
+
     company = await get_user_company(user_id)
 
     if not company:
@@ -180,21 +187,24 @@ async def process_user_apply_request_save(message: types.Message, state: FSMCont
         return
 
     today = datetime.now().strftime("%d-%m-%y_%H:%M")
-    output_path = await generate_application_excel(application, company, today, standard, joint_type, vmc, ut, pt, rt,
-                                                   ltc, ltv)
+    output_path = await generate_application_excel(
+        application, company, today, standard, joint_type, vmc, ut, pt, rt, ltc, ltv
+    )
 
-    await save_and_send_application(message, user_id, application, company, today, standard, joint_type, vmc, ut, pt,
-                                    rt, ltc, ltv, output_path)
+    await save_and_send_application(
+        message, user_id, application, company, today, standard, joint_type, vmc, ut, pt, rt, ltc, ltv, output_path
+    )
     if os.path.exists(output_path):
         os.remove(output_path)
+
     product_managers = await get_product_manager_all()
     if product_managers:
         for manager_id in product_managers:
             await message.bot.send_message(
                 chat_id=manager_id,
-                text=f'🆕 ОТДАТЬ В РАБОТУ НОВУЮ ЗАЯВКУ: <b>{application}</b> от компании: <b>{company}</b>, дата: <b>{today} </b>',
-                parse_mode="HTML")
-
+                text=f'🆕 ОТДАТЬ В РАБОТУ НОВУЮ ЗАЯВКУ: <b>{application}</b> от компании: <b>{company}</b>, дата: <b>{today}</b>',
+                parse_mode="HTML"
+            )
     await state.clear()
 
 
@@ -327,9 +337,8 @@ async def process_for_product_manager(message: types.Message, state: FSMContext)
         values = [[str(user_id), fio]]
         service.spreadsheets().values().append(
             spreadsheetId=spreadsheet_id,
-            range='users!D2:E',
+            range='users!D:E',
             valueInputOption='RAW',
-            insertDataOption='INSERT_ROWS',
             body={'values': values}
         ).execute()
         await message.answer(f"Вы зарегистрированы в компании как продукт-манеджер ✅")
@@ -471,7 +480,7 @@ async def show_empty_requests(callback_query: CallbackQuery):
             )
 
     if not buttons:
-        await callback_query.message.edit_text("Нет заявок без менеджера.")
+        await callback_query.message.edit_text("Все заявки разобраны.")
         return
 
     inline_keyboard = [[btn] for btn in buttons]
@@ -569,9 +578,8 @@ async def process_for_manager(message: types.Message, state: FSMContext):
         values = [[str(user_id), fio]]
         service.spreadsheets().values().append(
             spreadsheetId=spreadsheet_id,
-            range='users!G2:H',
+            range='users!G:H',
             valueInputOption='RAW',
-            insertDataOption='INSERT_ROWS',
             body={'values': values}
         ).execute()
         await message.answer(f"Вы зарегистрированы в компании как менеджер ✅")
@@ -741,20 +749,18 @@ async def registration_inspector(message: types.Message, state: FSMContext):
         await message.answer("Вы уже зарегестрированы в компании!")
 
 
-@router.callback_query(Form.waiting_for_reg_inspector)
+@router.message(Form.waiting_for_reg_inspector)
 async def process_for_inspector(message: types.Message, state: FSMContext):
     user_id = message.from_user.id
-    password = []
-    fio = []
-    if user_id:
-        fio, password = message.text.split(",")
+    fio, password = message.text.split(",")
+    fio = fio.strip()
+    password = password.strip()
     if await get_inspector_password() == password:
         values = [[str(user_id), fio]]
         service.spreadsheets().values().append(
             spreadsheetId=spreadsheet_id,
-            range='users!G:H',
+            range='users!J:K',
             valueInputOption='RAW',
-            insertDataOption='INSERT_ROWS',
             body={'values': values}
         ).execute()
         await message.answer(f"Вы зарегистрированы в компании как инспектор ✅")
@@ -986,8 +992,6 @@ async def assign_manager_to_request(callback_query: CallbackQuery):
 
     template_path = "templates/Отчет.xlsx"
     output_path = f"output/Отчет_{application}_{today}.xlsx"
-
-    from shutil import copyfile
     copyfile(template_path, output_path)
     file_id = upload_report(output_path)
     status_cell = f'R{order_idx + 1}'
