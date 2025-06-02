@@ -103,6 +103,3 @@
    ```bash
    cd telegram-bot
    docker-compose down
-
-## Как связаться со мной:
-[![Telegram Badge](https://img.shields.io/badge/Contact-blue?style=flat&logo=telegram&logoColor=white)](https://t.me/spystars777)
